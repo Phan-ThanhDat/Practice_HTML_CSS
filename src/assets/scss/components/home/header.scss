@@ -1,0 +1,43 @@
+@import"../../variable.scss";
+@import "../../mixins.scss";
+.slogan-contact {
+    background-color: #000;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 60px;
+    background-color: $color-header-footer;
+    @media screen and (min-width: 780px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+    }
+}
+
+.slogan {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+    @media screen and (min-width: 780px) {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+    @at-root #{&}__text {
+        color: $color-text-header-footer;
+    }
+}
+
+.contact {
+    display: flex;
+    color: $color-text-header-footer;
+    @at-root &__#{'icon'} {
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    @at-root &__#{'num-tel'} {
+        margin-left: 4px;
+    }
+}

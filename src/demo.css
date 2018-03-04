@@ -1,0 +1,92 @@
+/*VARIABLE*/
+
+
+/*MORE*/
+
+.btn {
+    padding: 15px 10px;
+}
+
+
+/*
+  helper css
+  */
+
+* {
+    font-size: 12px;
+    box-sizing: border-box;
+    color: #c6d311;
+    color: #00ff4c;
+    padding: 0px;
+    margin: 0px;
+}
+
+.test {
+    color: #00aaef;
+}
+
+.test>p {
+    font-size: 20px;
+}
+
+.test>p>a {
+    color: red;
+}
+
+.test :hover {
+    color: red;
+}
+
+.ffooter,
+.hheader {
+    background-color: tomato;
+}
+
+.hheader {
+    color: red;
+    border-radius: 10px;
+    -moz-boder-radius: 10px;
+}
+
+.hheader__logo {
+    font-size: 50px;
+}
+
+.hheader__logo--is-big {
+    height: 100px;
+    width: 100px;
+}
+
+.hheader__title {
+    color: cyan;
+}
+
+.hheader__title--is-big {
+    font-size: 20px;
+}
+
+
+/*
+  layout
+  */
+
+@media screen and (min-width: 1280px) {
+    .view-range {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/*
+  header
+  */
+
+.header {
+    background-color: red;
+}
+
+.h-contact__fb {
+    font-size: 80px;
+}

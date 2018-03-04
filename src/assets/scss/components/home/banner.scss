@@ -1,0 +1,29 @@
+@import"../../variable.scss";
+@import "../../mixins.scss";
+.banner {
+    position: relative;
+}
+
+.banner-pic {
+    display: block;
+    width: 100%;
+    height: 300px;
+    @media screen and (min-width: 780px) {
+        height: 200px;
+    }
+    @media screen and (min-width: 1280px) {
+        height: 160px;
+    }
+}
+
+.banner-info {
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+    @at-root &__#{'company-name'} {
+        color: red;
+    }
+    @at-root &__#{'company-info'} {
+        color: red;
+    }
+}

@@ -1,8 +1,25 @@
-/*COLOR*/
+// COLOR
 $color-brand: #000;
-$color-primary: #00AEEF;
+$color-primary: #0c82b1;
 $color-background: #FFFFFF;
-$color-title: #FFFF00;
-$color-text: #a9a9a9;
-/*MORE*/
+$color-title: #0c82b1;
+$color-text-content: #bcbcbcff;
+$color-text-header-footer:#fff;
+$font-size-mobile:14px;
+$font-size-desktop:16px;
+$color-header-footer:#000;
+$mediaConfig: ( tablet: 768px, desktop: 1200px, );
+@mixin colors($color: blue) {
+    background-color: $color;
+    @content;
+    border-color: $color;
+    color: $color1;
+}
 
+$color: white;
+$color1: #f00;
+.colors {
+    @include colors {
+        color: $color;
+    }
+}

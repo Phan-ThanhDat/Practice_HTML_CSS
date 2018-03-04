@@ -1,0 +1,394 @@
+/*
+    
+    
+    @import "variable";
+    @import "_mixins.scss";
+    @import "components/button";
+ 
+helper css
+
+    
+    $defaultPadding: 8px;
+    $string: 'abc';
+    $color-primary: #ff9aba;
+    $font-type: 'Arial',
+    '';
+    $color-primary: ( main: 'xanh-thuong', light: 'xanh-nhat', dark: 'xanh-dam');
+    * {
+        padding: $defaultPadding * 2;
+        @include size(12px);
+        box-sizing: border-box;
+        @include color(#bcbcbcff);
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    @media screen and (min-width:1280px) {
+        * {
+            @include size(14px);
+        }
+    }
+    
+    .test {
+        color: $color-primary;
+        >p {
+            font-size: 20px;
+            >a {
+                color: red;
+            }
+        }
+         :hover {
+            color: red;
+        }
+    }
+    
+    %fun {
+        background-color: tomato;
+    }
+    
+    .ffooter {
+        @extend %fun;
+    }
+    
+    .hheader {
+        @extend %fun;
+        color: red;
+        @include border-radius(10px);
+        @include element('logo') {
+            @include size(50px);
+            @include modifier('is-big') {
+                height: 100px;
+                width: 100px;
+            }
+        }
+        @at-root __title {
+            color: cyan;
+            @at-root --is-big {
+                font-size: 20px;
+            }
+        }
+    }
+    
+    
+    //the view range for users
+    //for mobile version
+    //content part
+    .content {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    
+    //tablet design
+    @media screen and (min-width:768px) {}
+    
+    //desktop desgin
+    @media screen and (min-width:1280px) {
+        .view-range {
+            max-width: 1280px;
+            @include margin-left(auto);
+            @include margin-right(auto);
+        }
+        .content {
+            padding-left: 200px;
+            padding-right: 200px;
+        }
+    }
+    
+    .bottom-border {
+        border-bottom: 2px solid cornflowerblue;
+        width: 28px;
+        margin-top: 16px;
+    }
+    
+    .header {}
+    
+    .header__contact {
+        background-color: #000;
+        height: 60px;
+        align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .h-contact__text {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .h-contact__info-contact {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 10px;
+    }
+    
+    .h-contact__icon--header {
+        padding-right: 8px;
+        font-size: 16px;
+        box-sizing: unset;
+    }
+    
+    .info-contact__tel-text {
+        margin-top: 4px;
+    }
+    
+    @media screen and (min-width:1280px) {
+        .header__contact {
+            height: 32px;
+            flex-wrap: nowrap;
+        }
+        .h-contact__text {
+            display: flex;
+            align-items: center;
+        }
+        .h-contact__info-contact {
+            justify-content: flex-end;
+        }
+    }
+    
+    .h-contact__email {}
+    
+    .h-contact__tel {}
+    
+    .header__logo-namecomp-nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .header__logo {
+        padding-top: 0px;
+        margin-top: 0;
+        width: 192px;
+        height: 62px;
+    }
+    
+    .header__name-comp {}
+    
+    .header__nav {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav__links {
+        display: none;
+    }
+    
+    @media screen and (min-width:1280px) {
+        .nav__icon-mobile {
+            display: none;
+        }
+        .nav__links {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-right: -16px;
+        }
+    }
+    
+    .nav-links__link--is-hover {
+        font-size: 16px;
+        list-style-type: none;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .nav-link__text {
+        text-decoration: none;
+    }
+    
+    .nav-links__link {
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 16px;
+        list-style-type: none;
+    }
+    
+    .wrap {}
+    
+    //banner part
+    .banner {
+        position: relative;
+        z-index: 1000;
+    }
+    
+    .banner__name-comp {
+        position: absolute;
+        top: 50%;
+        margin-top: -37px;
+        font-size: 24px;
+        color: blue;
+        z-index: 1100;
+    }
+    
+    .banner__text {
+        position: absolute;
+        top: 50%;
+        margin-top: -7px;
+        font-size: 20px;
+        color: #000;
+        z-index: 1100;
+    }
+    
+    .banner__pic {
+        width: 100%;
+        height: 400px;
+        display: block;
+        z-index: 1001;
+    }
+    
+    //boxes part
+    .boxes {
+        padding-top: 16px;
+    }
+    
+    .box__item {}
+    
+    .box-item__name-icon {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 16px;
+        padding-top: 16px;
+    }
+    
+    .box-name__left {}
+    
+    .box-name__title {}
+    
+    .box-item__icon {
+        font-size: 32px;
+        color: blue !important;
+        @include color(blue);
+    }
+    
+    .box-item__text {}
+    
+    @media screen and (min-width:1280px) {
+        .boxes {
+            padding-top: 8px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            margin-left: -12px;
+            margin-right: -12px;
+        }
+        .box__item {
+            margin-left: 12px;
+            margin-right: 12px;
+        }
+        .bottom-vertical {
+            border-left: 1px solid #c9b9b9;
+            margin-top: 16px;
+        }
+    }
+    
+    .abc {
+        color: cyan;
+        @at-root .title {
+            color: palegoldenrod;
+        }
+        __title {
+            color: red;
+        }
+    }
+    
+    a__b__c__d lastet-news 4 coms:1 comps 1 comps 1 comps1 comps .latest-news {
+        h2 4x compons
+    }
+    
+    comp-news {
+        img,
+        h3,
+        p,
+        a
+    }
+    
+    1 comps: img,
+    h3,
+    p,
+    a .posts {
+        @include element('title') {}
+        @include element('link') {}
+    }
+    
+    post>abc>h2 img a .service {
+        color: red;
+        @at-root __title {
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 32px;
+            @at-root __text {}
+        }
+        @include element('cover-items') {
+            @include element('item') {
+                display: flex;
+                justify-content: center;
+                padding-bottom: 24px;
+                @include element('logo') {
+                    font-size: 24px;
+                    margin-top: 34px;
+                }
+                @include element('main') {
+                    padding-left: 20px;
+                    @include element ('title') {
+                        padding-bottom: 16px;
+                        font-size: 24px;
+                        color: #000;
+                    }
+                    @include element ('text') {}
+                }
+            }
+        }
+        @media screen and (min-width: 1028px) {
+            @include element('cover-items') {
+                display: flex;
+                justify-content: space-between;
+                @include element('item') {
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 24px;
+                    @include element('logo') {
+                        font-size: 24px;
+                        margin-top: 34px;
+                    }
+                    @include element('main') {
+                        padding-left: 20px;
+                        @include element ('title') {
+                            padding-bottom: 16px;
+                            font-size: 24px;
+                            color: #000;
+                        }
+                        @include element ('text') {}
+                    }
+                }
+            }
+        }
+    }
+    
+    //lastet-news part
+    .latest-news {
+        @include element ('title') {
+            color: black;
+        }
+        @include element ('items') {
+            @include element ('item') {
+                @include element ('img') {
+                    display: block;
+                    width: 100px;
+                    height: 60px;
+                }
+                @include element ('title') {}
+                @include element ('text') {}
+                @include element ('link') {}
+                @include modifier ('desktop') {
+                    display: none;
+                }
+                @media screen and (min-width:1028px) {
+                    @include modifier ('desktop') {
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    
+    */

@@ -1,0 +1,67 @@
+/// BEM helper to create block element
+/// @example
+/// .parent {
+///    
+/// }
+@mixin element($element) {
+    @at-root &__#{$element} {
+        @content;
+    }
+}
+
+@function double($val) {
+    @return $val * 2;
+}
+
+@mixin border-radius($val) {
+    border-radius: $val;
+    -moz-boder-radius: $val;
+}
+
+@mixin modifier($modifier) {
+    @at-root &--#{$modifier} {
+        @content;
+    }
+}
+
+@mixin size($val) {
+    font-size: $val;
+}
+
+@mixin color($val) {
+    color: $val;
+}
+
+@mixin padding-left($val) {
+    padding-left: $val;
+}
+
+@mixin padding-right($val) {
+    padding-right: $val;
+}
+
+@mixin padding-top($val) {
+    padding-top: $val;
+}
+
+@mixin padding-bottom($val) {
+    padding-bottom: $val;
+}
+
+@mixin margin-left($val) {
+    margin-left: $val;
+}
+
+@mixin margin-right($val) {
+    margin-right: $val;
+}
+
+@mixin margin-top($val) {
+    margin-top: $val;
+}
+
+@mixin margin-bottom($val) {
+    margin-bottom: $val;
+}
+
+$color-primary: #f00 !default;

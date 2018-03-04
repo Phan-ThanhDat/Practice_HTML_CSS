@@ -1,11 +1,4 @@
-/*VARIABLE*/
-@import "variable";
-
-@import "components/button";
-
-h1 {
-  color: red;
-
-  font-size: 40px;
-}
-
+@import "mixins.scss";
+@import "components/common/layout.scss";
+@import "components/home/header.scss";
+@import "components/home/banner.scss";
