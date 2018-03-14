@@ -38,6 +38,12 @@
   }
 }
 
+.bottom-border {
+  border-bottom: 2px solid cornflowerblue;
+  width: 20px;
+  margin-top: 10px;
+}
+
 .colors {
   background-color: blue;
   color: white;
@@ -47,16 +53,14 @@
 
 .slogan-contact {
   background-color: #000;
-  color: red;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
   height: 60px;
-  background-color: #000;
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) {
   .slogan-contact {
     display: flex;
     justify-content: space-between;
@@ -71,7 +75,7 @@
   margin-bottom: 8px;
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 768px) {
   .slogan {
     flex-basis: auto;
     margin-bottom: 0;
@@ -103,38 +107,437 @@
   color: #f00;
 }
 
+.nav {
+  color: #000;
+}
+
+.nav__menu--mobile {
+  display: flex;
+}
+
+.nav__menu--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .nav__menu--mobile {
+    display: none;
+  }
+  .nav__menu--desktop {
+    display: flex;
+  }
+}
+
+.logo__text {
+  color: #1686e7;
+}
+
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.list-menu {
+  display: flex;
+  margin-right: -8px;
+}
+
+.list-menu__item {
+  list-style-type: none;
+  list-style-type: none;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.list-menu__item a {
+  color: #000;
+  text-decoration: none;
+}
+
+.colors {
+  background-color: blue;
+  color: white;
+  border-color: blue;
+  color: #f00;
+}
+
 .banner {
-  color: red;
+  position: relative;
+  height: 500px;
+  background-image: url(http://9mobi.vn/cf/images/2015/03/nkk/hinh-dep-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.banner-pic {
-  display: block;
-  width: 100%;
-  height: 300px;
-}
-
-@media screen and (min-width: 780px) {
-  .banner-pic {
-    height: 200px;
+@media screen and (min-width: 768px) {
+  .banner {
+    height: 350px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .banner-pic {
-    height: 160px;
+  .banner {
+    height: 260px;
   }
 }
 
 .banner-info {
-  color: red;
+  position: absolute;
+  top: 50%;
+  margin-top: -60px;
 }
 
 .banner-info__company-name {
-  color: red;
+  color: #1987ee;
 }
 
 .banner-info__company-info {
+  color: #000;
+}
+
+.colors {
+  background-color: blue;
+  color: white;
+  border-color: blue;
+  color: #f00;
+}
+
+.boxes {
+  background-color: #f1ecec;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .box-cover {
+    display: flex;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+
+.box {
   color: red;
+}
+
+.box__part-1 {
+  display: flex;
+  color: red;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.box__part-2 {
+  color: red;
+}
+
+@media screen and (min-width: 768px) {
+  .box {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.box-title__text {
+  color: #7a7474;
+}
+
+.box-icon {
+  color: #1953cf;
+  font-size: 32px;
+}
+
+.box-text {
+  color: #7a7474;
+}
+
+.colors {
+  background-color: blue;
+  color: white;
+  border-color: blue;
+  color: #f00;
+}
+
+.services-info {
+  text-align: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.services-info__title {
+  padding-bottom: 16px;
+  color: #000;
+  font-size: 40px;
+}
+
+.services-info__text {
+  color: #999595;
+}
+
+@media screen and (min-width: 768px) {
+  .service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.service-item {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 32px;
+}
+
+.service-item__title {
+  color: #000;
+  padding-bottom: 16px;
+  font-size: 24px;
+}
+
+.service-item__body {
+  color: #999595;
+  padding-left: 24px;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .service-item {
+    flex-basis: 50%;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .service-item {
+    flex-basis: 33.33%;
+  }
+}
+
+.service-icon {
+  margin-top: 56px;
+  font-size: 40px;
+  color: #143d94;
+}
+
+.service-text {
+  color: #999595;
+}
+
+.latest-news {
+  padding-top: 24px;
+}
+
+.news-header {
+  padding-bottom: 24px;
+}
+
+.news-header__text {
+  color: #110101;
+}
+
+@media screen and (min-width: 780px) {
+  .post-items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.post-item {
+  padding-bottom: 24px;
+}
+
+.post-item__cover-img {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media screen and (min-width: 1280px) {
+  .post-item__cover-img {
+    padding: 0;
+  }
+}
+
+.post-item__title {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.post-item__text {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  color: #8d8787;
+}
+
+.post-item__link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  color: #0b5acf;
+}
+
+@media screen and (min-width: 780px) {
+  .post-item {
+    flex-basis: 50%;
+    padding-right: 24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .post-item {
+    flex-basis: 25%;
+    padding-right: 16px;
+  }
+}
+
+.pic-news {
+  display: block;
+  width: 100%;
+}
+
+.ref-call {
+  padding-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .ref-call {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+.ref__title {
+  color: #0e0101;
+}
+
+@media screen and (min-width: 768px) {
+  .ref__items {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ref {
+    flex-basis: 75%;
+  }
+}
+
+.ref-item {
+  padding-top: 16px;
+}
+
+.ref-item__info {
+  background-color: #a9a9a9;
+  border: 1px solid #979191;
+  margin-top: 16px;
+  width: 150px;
+  height: 100px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .ref-item__info {
+    padding-right: 24px;
+    width: 150px;
+    height: 90px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .ref-item__info {
+    padding-right: 24px;
+    width: 100%;
+    height: 90px;
+  }
+}
+
+.ref-item--mobile {
+  display: none;
+}
+
+.ref-item--desktop {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .ref-item {
+    flex-basis: 50%;
+    padding-right: 24px;
+  }
+  .ref-item--mobile {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .ref-item {
+    flex-basis: 16.6%;
+    padding-right: 16px;
+  }
+  .ref-item--desktop {
+    display: block;
+  }
+}
+
+.call-you {
+  padding-top: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .call-you {
+    width: 25%;
+    padding: 0;
+  }
+}
+
+.call-title {
+  color: #080202;
+}
+
+.icon-next-custom {
+  position: absolute;
+  left: 91%;
+  top: 63%;
+  z-index: 10;
+  font-size: 32px;
+}
+
+.form-contact {
+  display: inline-block;
+  padding-top: 32px;
+}
+
+.form-contact__input {
+  position: relative;
+}
+
+.form-contact__input:first-child::after {
+  content: '';
+  height: 1px;
+  width: calc(100% - 32px);
+  background-color: white;
+  display: block;
+  /* margin-left: 15px; */
+  /* margin-right: 15px; */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: calc((100% - 32px) / -2);
+}
+
+.form-contact__input > input {
+  display: block;
+  background-color: #d8d1d1;
+  color: #423939;
+  border-radius: 5px;
+  border: 1px solid #d8d1d1;
+  padding: 10px 50px 10px 10px;
+  width: 170px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,50 @@
+@import"../../variable.scss";
+@import "../../mixins.scss";
+.nav {
+    color: #000;
+    @at-root &__#{'menu'} {
+        @at-root &--#{'mobile'} {
+            display: flex;
+        }
+        @at-root &--#{'desktop'} {
+            display: none;
+        }
+        @media screen and (min-width: 1280px) {
+            @at-root &--#{'mobile'} {
+                display: none;
+            }
+            @at-root &--#{'desktop'} {
+                display: flex;
+            }
+        }
+    }
+}
+
+.logo {
+    @at-root &__#{'text'} {
+        color: #1686e7;
+    }
+}
+
+.logo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.list-menu {
+    display: flex;
+    margin-right: -8px;
+    @at-root &__#{'item'} {
+        list-style-type: none;
+        list-style-type: none;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    @at-root &__#{'item'} a {
+        color: #000;
+        text-decoration: none;
+    }
+}

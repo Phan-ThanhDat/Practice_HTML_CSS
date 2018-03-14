@@ -1,0 +1,56 @@
+.colors {
+  background-color: blue;
+  color: white;
+  border-color: blue;
+  color: #f00;
+}
+
+.boxes {
+  background-color: #f1ecec;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .box-cover {
+    display: flex;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+}
+
+.box {
+  color: red;
+}
+
+.box__part-1 {
+  display: flex;
+  color: red;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.box__part-2 {
+  color: red;
+}
+
+@media screen and (min-width: 768px) {
+  .box {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.box-title__text {
+  color: #7a7474;
+}
+
+.box-icon {
+  color: #1953cf;
+  font-size: 32px;
+}
+
+.box-text {
+  color: #7a7474;
+}

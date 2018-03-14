@@ -1,0 +1,57 @@
+@import"../../variable.scss";
+.services {}
+
+.services-info {
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @at-root &__#{'title'} {
+        padding-bottom: 16px;
+        color: #000;
+        font-size: 40px;
+    }
+    @at-root &__#{'text'} {
+        color: #999595;
+    }
+}
+
+.service-items {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.service-item {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 32px;
+    @at-root &__#{'title'} {
+        color: #000;
+        padding-bottom: 16px;
+        font-size: 24px;
+    }
+    @at-root &__#{'body'} {
+        color: #999595;
+        padding-left: 24px;
+        flex-grow: 1;
+    }
+    @media screen and (min-width: 768px) {
+        flex-basis: 50%;
+        padding-right: 24px;
+    }
+    @media screen and (min-width:1280px) {
+        flex-basis: 33.33%;
+    }
+}
+
+.service-icon {
+    margin-top: 56px;
+    font-size: 40px;
+    color: #143d94;
+}
+
+.service-text {
+    color: #999595;
+}

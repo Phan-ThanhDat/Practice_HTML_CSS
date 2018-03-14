@@ -2,17 +2,15 @@
 @import "../../mixins.scss";
 .banner {
     position: relative;
-}
-
-.banner-pic {
-    display: block;
-    width: 100%;
-    height: 300px;
-    @media screen and (min-width: 780px) {
-        height: 200px;
+    height: 500px;
+    background-image: url(http://9mobi.vn/cf/images/2015/03/nkk/hinh-dep-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (min-width: 768px) {
+        height: 350px;
     }
     @media screen and (min-width: 1280px) {
-        height: 160px;
+        height: 260px;
     }
 }
 
@@ -21,9 +19,9 @@
     top: 50%;
     margin-top: -60px;
     @at-root &__#{'company-name'} {
-        color: red;
+        color: #1987ee;
     }
     @at-root &__#{'company-info'} {
-        color: red;
+        color: #000;
     }
 }
